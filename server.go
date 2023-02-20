@@ -6,8 +6,10 @@ import (
 	"net/http"
 )
 
-const PATH = "/time"
-const PORT = ":8795"
+const (
+	PATH = "/time"
+	PORT = ":8795"
+)
 
 func main() {
 	http.HandleFunc(PATH, TimeHandler)

@@ -9,12 +9,12 @@ import (
 
 func TimeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
-    http.Error(w, "Method is not supported, use GET request", http.StatusNotFound)
-    return
-    } else if r.URL.Path != "/time" {
-    http.Error(w, "404 page not found", http.StatusNotFound)
-    return
-  }
+		http.Error(w, "Method is not supported, use GET request", http.StatusNotFound)
+		return
+	} else if r.URL.Path != "/time" {
+		http.Error(w, "404 page not found", http.StatusNotFound)
+		return
+	}
 
 	current := time.Now().Format(time.RFC3339)
 	response := map[string]string{"time": current}
