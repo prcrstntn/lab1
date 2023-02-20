@@ -15,7 +15,7 @@ func TimeHandler(w http.ResponseWriter, r *http.Request) {
     http.Error(w, "404 page not found", http.StatusNotFound)
     return
   }
-	
+
 	current := time.Now().Format(time.RFC3339)
 	response := map[string]string{"time": current}
 	w.Header().Set("Content-Type", "application/json")
