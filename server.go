@@ -6,9 +6,12 @@ import (
 	"log"
 )
 
+const PORT = ":8795"
+
+
 func main() {
-	fmt.Printf("Starting server at port :8795")
-	err := http.ListenAndServe(":8795", nil)
+	fmt.Printf("Starting server at port %s", PORT)
+	err := http.ListenAndServe(PORT, nil)
 	if err != nil {
 	  log.Fatal(err)
 	}
